@@ -36,6 +36,8 @@ THEN the saved events persist
 ## Project Link
 Here you can find the link to the deployed application:
 
+https://nayonnapurnell.github.io/Daily-Planner-HTML-CSS-JQuery-MomentJS/
+
 
 ## Mock-Up
 The following animation demonstrates the application functionality:
