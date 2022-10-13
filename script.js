@@ -6,3 +6,5 @@
 //         $( ".container" ).append( "<li><textarea>Test</textarea></li>" );
 //     }
 // });
+
+$("#currentDay").text(moment().format('ddd MMM Do, YYYY'));
