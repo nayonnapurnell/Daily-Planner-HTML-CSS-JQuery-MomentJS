@@ -3,6 +3,10 @@ $("#currentDay").text(moment().format('ddd MMM Do, YYYY'));
 //$("#dailyMessage").text("Hellow World!");
 
 var el = document.getElementById("input-group mb-3");
+$(".saveBtn").on("click",function(){
+    console.log($(this));
+
+})
 
 //Color Blocks for the 9AM - 5PM Time Schedule
 var currentTime = new Date().getHours();
