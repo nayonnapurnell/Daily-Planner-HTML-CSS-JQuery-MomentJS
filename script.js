@@ -2,9 +2,10 @@
 $("#currentDay").text(moment().format('ddd MMM Do, YYYY'));
 //$("#dailyMessage").text("Hellow World!");
 
-var el = document.getElementById("input-group mb-3");
+var el = document.getElementById("input-group");
 $(".saveBtn").on("click",function(){
     console.log($(this));
+    alert( "Handler for .click() called." );
 
 })
 
@@ -27,5 +28,12 @@ else {
     $("#dailyMessage").text("Have a good afternoon!");
     document.body.style.backgroundColor="grey";
 }
+
+//JQuery OnLoad Function
+
+//JQuery OnClick Function
+
+
+window.localStorage.getItem('car');
 
 
