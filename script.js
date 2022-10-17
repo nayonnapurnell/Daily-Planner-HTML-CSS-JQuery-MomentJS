@@ -2,11 +2,47 @@
 $("#currentDay").text(moment().format('ddd MMM Do, YYYY'));
 //$("#dailyMessage").text("Hellow World!");
 
-var el = document.getElementById("input-group");
-$(".saveBtn").on("click",function(){
-    console.log($(this));
-    alert( "Handler for .click() called." );
 
+//Get input textarea elements 
+var schedule9AMInput = document.getElementById("9AM");
+var schedule10AMInput = document.getElementById("10AM");
+var schedule11AMInput = document.getElementById("11AM");
+var schedule12PMInput = document.getElementById("12PM");
+var schedule1PMInput = document.getElementById("1PM");
+var schedule2PMInput = document.getElementById("2PM");
+var schedule3PMInput = document.getElementById("3PM");
+var schedule4PMInput = document.getElementById("4PM");
+var schedule5PMInput = document.getElementById("5PM");
+
+
+
+//Get input values from the textarea elements to store into LocalStorage
+schedule9AMInput.value = localStorage.getItem("9AMschedule");
+schedule10AMInput.value = localStorage.getItem("10AMschedule");
+schedule11AMInput.value = localStorage.getItem("11AMschedule");
+schedule12PMInput.value = localStorage.getItem("12PMschedule");
+schedule1PMInput.value = localStorage.getItem("1PMschedule");
+schedule2PMInput.value = localStorage.getItem("2PMschedule");
+schedule3PMInput.value = localStorage.getItem("3PMschedule");
+schedule4PMInput.value = localStorage.getItem("4PMschedule");
+schedule5PMInput.value = localStorage.getItem("5PMschedule");
+
+
+
+$(".saveBtn").on("click",function(){
+
+   //Store the input values from the textarea elements into LocalStorage
+    localStorage.setItem("9AMschedule", schedule9AMInput.value);
+    localStorage.setItem("10AMschedule", schedule10AMInput.value);
+    localStorage.setItem("11AMschedule", schedule11AMInput.value);
+    localStorage.setItem("12PMschedule", schedule12PMInput.value);
+    localStorage.setItem("1PMschedule", schedule1PMInput.value);
+    localStorage.setItem("2PMschedule", schedule2PMInput.value);
+    localStorage.setItem("3PMschedule", schedule3PMInput.value);
+    localStorage.setItem("4PMschedule", schedule4PMInput.value);
+    localStorage.setItem("5PMschedule", schedule5PMInput.value);
+    console.log($(this));
+    alert( "Handler for .click() called." );  
 })
 
 //Color Blocks for the 9AM - 5PM Time Schedule
@@ -31,9 +67,5 @@ else {
 
 //JQuery OnLoad Function
 
-//JQuery OnClick Function
-
-
-window.localStorage.getItem('car');
 
 
