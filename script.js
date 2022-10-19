@@ -1,7 +1,8 @@
 //Current Day <p> Tag
 $("#currentDay").text(moment().format('ddd MMM Do, YYYY'));
-//$("#dailyMessage").text("Hellow World!");
 
+//Color Blocks for the 9AM - 5PM Time Schedule
+var currentTime = new Date().getHours();
 
 //Get input textarea elements 
 var schedule9AMInput = document.getElementById("9AM");
@@ -14,8 +15,6 @@ var schedule3PMInput = document.getElementById("3PM");
 var schedule4PMInput = document.getElementById("4PM");
 var schedule5PMInput = document.getElementById("5PM");
 
-
-
 //Get input values from the textarea elements to store into LocalStorage
 schedule9AMInput.value = localStorage.getItem("9AMschedule");
 schedule10AMInput.value = localStorage.getItem("10AMschedule");
@@ -27,10 +26,12 @@ schedule3PMInput.value = localStorage.getItem("3PMschedule");
 schedule4PMInput.value = localStorage.getItem("4PMschedule");
 schedule5PMInput.value = localStorage.getItem("5PMschedule");
 
-
+$( window ).on("load",function(){
+    //This line of code below is a test
+    alert("The text has been changed.");
+  })
 
 $(".saveBtn").on("click",function(){
-
    //Store the input values from the textarea elements into LocalStorage
     localStorage.setItem("9AMschedule", schedule9AMInput.value);
     localStorage.setItem("10AMschedule", schedule10AMInput.value);
@@ -42,11 +43,11 @@ $(".saveBtn").on("click",function(){
     localStorage.setItem("4PMschedule", schedule4PMInput.value);
     localStorage.setItem("5PMschedule", schedule5PMInput.value);
     console.log($(this));
-    alert( "Handler for .click() called." );  
 })
 
-//Color Blocks for the 9AM - 5PM Time Schedule
-var currentTime = new Date().getHours();
+
+
+
 
 //If the currentTime is in the Past
 if (currentTime < 11) {
