@@ -108,6 +108,18 @@ if(currentTime > startTime){
     schedule5PMInput.classList.add("future");
 }
 
+//if the page loads and the time block is in the past the text area will be gray
+if(currentTime < endTime){
+    schedule9AMInput.classList.add("past");
+    schedule10AMInput.classList.add("past");
+    schedule11AMInput.classList.add("past");
+    schedule12PMInput.classList.add("past");
+    schedule1PMInput.classList.add("past");
+    schedule2PMInput.classList.add("past");
+    schedule3PMInput.classList.add("past");
+    schedule4PMInput.classList.add("past");
+    schedule5PMInput.classList.add("past");
+}
 
    
     //This line of code below is a test
