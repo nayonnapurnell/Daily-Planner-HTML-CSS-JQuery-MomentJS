@@ -1,5 +1,6 @@
 //Current Day <p> Tag
 $("#currentDay").text(moment().format('ddd MMM Do, YYYY'));
+$("#displayCurrentTime").text(moment().format('LT'));
 
 //Color Blocks for the 9AM - 5PM Time Schedule
 var currentTime = new Date().getHours();
