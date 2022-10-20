@@ -5,6 +5,7 @@ $("#displayCurrentTime").text(moment().format('LT'));
 //Color Blocks for the 9AM - 5PM Time Schedule
 //Current time
 var currentTime = (moment().format('LT'));
+//var currentTime = moment("9:00:00", "HH:mm:ss").format("hh:mm A");
 
 //Start time = 9:00AM
 var startTime = moment("9:00:00", "HH:mm:ss").format("hh:mm A");
@@ -21,7 +22,7 @@ console.log(startTime);
 console.log(endTime);
 
 
-//Get input textarea elements 
+//Get input textarea elements individually
 var schedule9AMInput = document.getElementById("9AM");
 var schedule10AMInput = document.getElementById("10AM");
 var schedule11AMInput = document.getElementById("11AM");
@@ -31,6 +32,9 @@ var schedule2PMInput = document.getElementById("2PM");
 var schedule3PMInput = document.getElementById("3PM");
 var schedule4PMInput = document.getElementById("4PM");
 var schedule5PMInput = document.getElementById("5PM");
+//Get all of the textarea elements
+var allTextAreaEl = document.querySelectorAll('.form-control');
+console.log(allTextAreaEl);
 
 //Get input values from the textarea elements to store into LocalStorage
 schedule9AMInput.value = localStorage.getItem("9AMschedule");
@@ -90,6 +94,21 @@ else if(currentTime == endTime){
 //Daily Message
 $("#dailyMessage").text("Have a good evening!");
 }
+
+//if the page loads and the time block is in the future the text area will be green
+if(currentTime > startTime){
+    schedule9AMInput.classList.add("future");
+    schedule10AMInput.classList.add("future");
+    schedule11AMInput.classList.add("future");
+    schedule12PMInput.classList.add("future");
+    schedule1PMInput.classList.add("future");
+    schedule2PMInput.classList.add("future");
+    schedule3PMInput.classList.add("future");
+    schedule4PMInput.classList.add("future");
+    schedule5PMInput.classList.add("future");
+}
+
+
    
     //This line of code below is a test
     alert("The page has reloaded.");
