@@ -42,7 +42,7 @@ https://nayonnapurnell.github.io/Daily-Planner-HTML-CSS-JQuery-MomentJS/
 ## Mock-Up
 The following image demonstrates the application functionality:
 
-![Note: This layout is designed for desktop viewing, you may notice that some of the elements don't look exactly like the mock-up at a resolution smaller than 768px.](./assets/images/mockUp.png)
+![](./assets/images/mockUp.png)
 
 
 ## License
