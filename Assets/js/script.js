@@ -120,10 +120,6 @@ if(currentTime < endTime){
     schedule4PMInput.classList.add("past");
     schedule5PMInput.classList.add("past");
 }
-
-   
-    //This line of code below is a test
-    alert("The page has reloaded.");
   })
 
 $(".saveBtn").on("click",function(){
