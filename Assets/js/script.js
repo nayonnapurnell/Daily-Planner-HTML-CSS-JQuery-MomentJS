@@ -3,8 +3,18 @@ $("#currentDay").text(moment().format('ddd MMM Do, YYYY'));
 $("#displayCurrentTime").text(moment().format('LT'));
 
 //Color Blocks for the 9AM - 5PM Time Schedule
+//Current time
+var currentTime = (moment().format('LT'));
+
 //Start time = 9:00AM
 var startTime = moment("9:00:00", "HH:mm:ss").format("hh:mm A");
+var _10AMTime = moment("10:00:00", "HH:mm:ss").format("hh:mm A");
+var _11AMTime = moment("11:00:00", "HH:mm:ss").format("hh:mm A");
+var _12PMTime = moment("12:00:00", "HH:mm:ss").format("hh:mm A");
+var _1PMTime = moment("13:00:00", "HH:mm:ss").format("hh:mm A");
+var _2PMTime = moment("14:00:00", "HH:mm:ss").format("hh:mm A");
+var _3PMTime = moment("15:00:00", "HH:mm:ss").format("hh:mm A");
+var _4PMTime = moment("16:00:00", "HH:mm:ss").format("hh:mm A");
 //End time = 5:00PM
 var endTime = moment("17:00:00", "HH:mm:ss").format("hh:mm A");
 console.log(startTime); 
@@ -34,7 +44,52 @@ schedule4PMInput.value = localStorage.getItem("4PMschedule");
 schedule5PMInput.value = localStorage.getItem("5PMschedule");
 
 $( window ).on("load",function(){
-//if the current time === 9AM the text area will be gray
+//if the page loads and the time block is on the current time the text area will be red
+if(currentTime == startTime){
+    schedule9AMInput.classList.add("present");
+//Daily Message
+$("#dailyMessage").text("Have a good morning!");
+} 
+else if(currentTime == _10AMTime){
+    schedule10AMInput.classList.add("present");
+//Daily Message
+$("#dailyMessage").text("Have a good morning!");
+}
+else if(currentTime == _11AMTime){
+    schedule11AMInput.classList.add("present");
+//Daily Message
+$("#dailyMessage").text("Have a good morning!");
+}
+else if(currentTime == _12PMTime){
+    schedule12PMInput.classList.add("present");
+//Daily Message
+$("#dailyMessage").text("Have a good afternoon!");
+}
+else if(currentTime == _1PMTime){
+    schedule1PMInput.classList.add("present");
+//Daily Message
+$("#dailyMessage").text("Have a good afternoon!");
+}
+else if(currentTime == _2PMTime){
+    schedule1PMInput.classList.add("present");
+//Daily Message
+$("#dailyMessage").text("Have a good afternoon!");
+}
+else if(currentTime == _3PMTime){
+    schedule1PMInput.classList.add("present");
+//Daily Message
+$("#dailyMessage").text("Have a good afternoon!");
+}
+else if(currentTime == _4PMTime){
+    schedule1PMInput.classList.add("present");
+//Daily Message
+$("#dailyMessage").text("Have a good evening!");
+}
+else if(currentTime == endTime){
+    schedule1PMInput.classList.add("present");
+//Daily Message
+$("#dailyMessage").text("Have a good evening!");
+}
    
     //This line of code below is a test
     alert("The page has reloaded.");
@@ -55,27 +110,6 @@ $(".saveBtn").on("click",function(){
 })
 
 
-
-
-
-//If the currentTime is in the Past
-if (currentTime < 11) {
-    //Daily Message
-    $("#dailyMessage").text("Have a good morning!");
-    //document.body.classList.add("past");
-} //If the currentTime is in the Present
-else if (currentTime === 12) {
-    //Daily Message
-    $("#dailyMessage").text("Have a good day!");
-    document.body.style.backgroundColor="orange";
-} //If the currentTime is in the Future
-else {
-    //Daily Message
-    $("#dailyMessage").text("Have a good afternoon!");
-    document.body.style.backgroundColor="grey";
-}
-
-//JQuery OnLoad Function
 
 
 
