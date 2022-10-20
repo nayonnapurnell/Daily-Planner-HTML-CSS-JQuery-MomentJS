@@ -3,7 +3,13 @@ $("#currentDay").text(moment().format('ddd MMM Do, YYYY'));
 $("#displayCurrentTime").text(moment().format('LT'));
 
 //Color Blocks for the 9AM - 5PM Time Schedule
-var currentTime = new Date().getHours();
+//Start time = 9:00AM
+var startTime = moment("9:00:00", "HH:mm:ss").format("hh:mm A");
+//End time = 5:00PM
+var endTime = moment("17:00:00", "HH:mm:ss").format("hh:mm A");
+console.log(startTime); 
+console.log(endTime);
+
 
 //Get input textarea elements 
 var schedule9AMInput = document.getElementById("9AM");
@@ -28,8 +34,10 @@ schedule4PMInput.value = localStorage.getItem("4PMschedule");
 schedule5PMInput.value = localStorage.getItem("5PMschedule");
 
 $( window ).on("load",function(){
+//if the current time === 9AM the text area will be gray
+   
     //This line of code below is a test
-    alert("The text has been changed.");
+    alert("The page has reloaded.");
   })
 
 $(".saveBtn").on("click",function(){
