@@ -42,7 +42,7 @@ https://nayonnapurnell.github.io/Daily-Planner-HTML-CSS-JQuery-MomentJS/
 ## Mock-Up
 The following image demonstrates the application functionality:
 
-![A user clicks on slots on the color-coded calendar and edits the events.](assets/mockUp.png)
+![A user clicks on slots on the color-coded calendar and edits the events.](assets/images/mockUp.png)
 
 
 
